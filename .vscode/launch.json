@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug compass (OpenOCD)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/target/thumbv7em-none-eabihf/release/magnetometer-compass",
+            "configFiles": ["${workspaceFolder}/stm32f3.cfg"],
+            "gdbPath": "gdb",
+            "preLaunchTask": "Build firmware",
+            "runToEntryPoint": "Reset_Handler"
+        }
+    ]
+}
